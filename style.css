@@ -1,0 +1,442 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+}
+
+.fa-graduation-cap {
+  color: red;
+}
+
+.logo {
+  margin: 10px;
+}
+
+.logo .fa-graduation-cap {
+  font-size: 30px;
+}
+
+.logo span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero {
+  background-image: linear-gradient(rgba(4, 9, 30, 0.2), rgba(4, 9, 30, 0.3)), url(background_img.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+nav {
+  display: none;
+}
+.sidebar {
+  width: 250px;
+  background: #fff;
+  color: #000;
+  padding: 1.5rem 1rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin: 1rem 0;
+}
+
+.sidebar ul li a {
+  color: #000;
+  text-decoration: none;
+  display: block;
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+  background: red;
+  color: #fff;
+}
+
+.menu-toggle {
+  position: relative;
+  top: 0;
+  left: -15px;
+  font-size: 18px;
+  color: #fff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    width: 200px;
+  }
+  
+  .sidebar.active {
+    transform: translateX(0);
+  }
+  
+  .menu-toggle {
+    display: block;
+  }
+}
+
+.content {
+  margin-top: 200px;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.content h1 {
+  display: flex;
+  font-size: 20px;
+  letter-spacing: 0.8px;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.content p {
+  display: flex;
+  justify-content: center;
+  padding: 18px;
+  font-size: 13px;
+  padding-top: 10px;
+  padding-bottom: 0;
+}
+
+.content p .text {
+  padding-top: 0px;
+  padding-bottom: 0;
+}
+
+.content button {
+  margin-top: 40px;
+  margin-left: 100px;
+  margin-bottom: 0;
+  border: 1px solid #fff;
+  background: transparent;
+  padding: 10px 10px;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.content button:hover {
+  background: #fff;
+  transition: 0.8s;
+  font-weight: bold;
+  color: #000;
+}
+
+.offer {
+  margin-top: 50px;
+}
+
+.offer h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.card {
+  margin-top: 20px;
+  margin: 20px;
+}
+
+.box {
+  box-shadow: 0px 1px 8px #777;
+  background: #F3D4D4;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 35px;
+}
+
+.box h2 {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  padding-top: 8px;
+}
+
+.box p {
+  font-size: 12px;
+  padding-top: 10px;
+  color: #555;
+  padding: 5px;
+}
+
+.facility {
+  margin-top: 100px;
+  margin-bottom: 80px;
+}
+
+.facility h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.facility p {
+  display: flex;
+  justify-content: center;
+  font-size: 13px;
+  padding: 40px;
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+
+.image-box {
+  margin-top: 20px;
+  margin: 25px;
+}
+
+.image-box img {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.text2 {
+  font-weight: bold;
+}
+
+.autoplay {
+  animation: text-appear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 100vh;
+}
+
+@keyframes text-appear {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.imagereveal {
+  animation: imagereveal both;
+  animation-timeline: view(10%);
+}
+
+@keyframes imagereveal {
+  from {
+    filter: saturate(0) contrast(2) brightness(.1) blur(4);
+    opacity: 0;
+    scale: .95;
+    translate: 0 4rem;
+  }
+  
+  to {
+    filter: none;
+    opacity: 1;
+    scale: 1;
+    translate: 0 0;
+  }
+}
+
+.service {
+  margin-bottom: 80px;
+}
+
+.service h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.card-box {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  height: 150px;
+  background: #E7C6C6;
+  border-radius: 10px;
+  margin: 30px;
+}
+
+.card-box img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.card-box p {
+  font-size: 12px;
+  padding: 5px;
+  padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    height: 150vh;
+  }
+  
+  .sidebar {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+  
+  .content button {
+    margin: 550px;
+    margin-top: 30px;
+  }
+  
+  .card {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .box {
+    width: 300px;
+  }
+  
+  nav {
+    display: flex;
+    margin-top: 7px;
+    padding: 20px;
+  }
+  
+  nav ul li {
+    list-style: none;
+    text-decoration: none;
+  }
+  
+  ul li {
+    display: inline-block;
+    color: #fff;
+    margin: 0 15px;
+  }
+  .image-box {
+    display: flex;
+    justify-content: space-between
+  }
+  .card-pack {
+    display: flex;
+    justify-content: space-between;
+  }
+  .enroll {
+    display: flex;
+    height: 50vh;
+    background-size: cover;
+    margin: 5px;
+  } 
+  .enroll h1 {
+    padding: 450px;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  .About {
+    margin-top: 100px;
+  }
+}
+
+.enroll {
+  background-image: linear-gradient(rgba(4, 9, 30, 0.8), rgba(4, 9, 30, 0.9)), url(enroll_img.jpg);
+  height: 70vh;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.enroll h1 {
+  color: #fff;
+  padding-top: 120px;
+  font-size: 25px;
+  margin: 25px;
+}
+
+.enroll p {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.enroll span {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.About {
+  margin-top: 50px;
+}
+
+.About h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.About p {
+  display: flex;
+  justify-content: center;
+  font-size: 13px;
+  padding: 20px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+}
+.icons img {
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.fadeup {
+  animation: fadeup both;
+  animation-timeline: view();
+}
+
+timeline-item:nth-child(1) {
+  animation-range: entry 20% cover 40%;
+}
+
+timeline-item:nth-child(2) {
+  animation-range: entry 40% cover 60%;
+}
+
+timeline-item:nth-child(3) {
+  animation-range: 60% cover 80%;
+}
+
+@keyframes fadeup {
+  from {
+    opacity: 0;
+    transform: translateY(5px) scale(0.1);
+  }
+  
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
